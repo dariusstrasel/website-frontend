@@ -1,54 +1,57 @@
 @import '../bootstrap/bootstrap';
-$imgHeight: 233px!important;
+$img-height: 233px !important;
+
 .card {
   background: none !important;
-  border: none !important;
+  border: 0 !important;
 }
 
 .lazyload-wrapper {
   .card-img {
     border-radius: 0 !important;
-    min-height: $imgHeight;
-    max-height: $imgHeight;
+    max-height: $img-height;
+    min-height: $img-height;
     object-fit: cover;
   }
+
   .fade-appear {
     opacity: 0.01;
   }
+
   .fade-appear.fade-appear-active {
     opacity: 1;
-    transition: opacity 600ms ease-in; //ms should match the value of transitionAppearTimeout
+    transition: opacity 600ms ease-in;
   }
 }
 
 .card-title-container {
   background: $denim;
-  text-align: center;
-  font-weight: 100;
-  font-size: 1.4rem;
   color: $gold;
-  width: 100%;
-  padding: .55rem;
-  white-space: nowrap;
+  font-size: 1.4rem;
+  font-weight: 100;
   overflow: hidden;
+  padding: 0.55rem;
+  text-align: center;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
 }
 
 .card-subtitle-container {
   background: #355463;
-  font-size: 0.8em;
-  font-weight: normal;
-  text-align: right;
-  padding: .25rem .55rem;
   color: rgba(246, 205, 77, 0.7);
+  font-size: 0.8em;
   font-style: italic;
-  white-space: nowrap;
+  font-weight: normal;
   overflow: hidden;
+  padding: 0.25rem 0.55rem;
+  text-align: right;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .card-block {
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .card-text {
@@ -61,40 +64,41 @@ $imgHeight: 233px!important;
 }
 
 .card-info {
-  width: 100%;
-  margin-bottom: 1.5rem;
   line-height: 2.5;
+  margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 .card-heading {
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: bold;
   line-height: 1.25rem;
   margin-top: 10px;
 }
 
-.card-social-share {
-   :hover {
+.card-social-share { 
+  display: block;
+  enable-background: new 0 0 24 24;
+  height: 1.75rem;
+  width: 1.75rem;
+
+  :hover {
     cursor: pointer;
   }
-  width: 1.75rem;
-  height: 1.75rem;
-  enable-background: new 0 0 24 24;
-  display: block;
 }
 
 .card-social {
+  display: flex;
+  flex-wrap: nowrap;
   height: 100%;
   margin-top: 10px;
   white-space: nowrap;
-  flex-wrap: nowrap;
-  display: flex;
 }
 
 .social-link-fb svg,
 .social-link-tw svg {
-  height: 1.7rem;
   cursor: pointer;
+  height: 1.7rem;
 }
 
 .social-link-fb svg {
@@ -105,14 +109,15 @@ $imgHeight: 233px!important;
 
 .social-link-tw svg {
   .st0 {
-    fill: #2DA1EC;
+    fill: #2da1ec;
   }
 }
 
 @include media-breakpoint-down(sm) {
   .card-heading {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
+
   .social-link-fb svg,
   .social-link-tw svg {
     height: 2rem;
